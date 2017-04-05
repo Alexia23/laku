@@ -1,0 +1,4 @@
+﻿  processinfo.cpp
+c:\users\administrator\documents\visual studio 2015\projects\processinfo\processinfo\processinfo.cpp(41): warning C4477: “wprintf”: 格式字符串“%s”需要类型“wchar_t *”的参数，但可变参数 1 拥有了类型“DWORD”
+  processinfo.vcxproj -> C:\Users\Administrator\documents\visual studio 2015\Projects\processinfo\Debug\processinfo.exe
+  processinfo.vcxproj -> C:\Users\Administrator\documents\visual studio 2015\Projects\processinfo\Debug\processinfo.pdb (Full PDB)
