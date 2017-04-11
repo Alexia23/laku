@@ -259,7 +259,7 @@ Section "laku" SEC01
   File "..\..\..\..\..\laku测试\Release(2016-12-14)\LakuTouch.cfg"
   File "..\..\..\..\..\laku测试\Release(2016-12-14)\libeay32.dll"
   File "..\..\..\..\..\laku测试\Release(2016-12-14)\LuckeyApp.exe"
-  File "..\..\..\..\..\laku测试\Rele ase(2016-12-14)\LuckeyApp.pdb"
+  File "..\..\..\..\..\laku测试\Release(2016-12-14)\LuckeyApp.pdb"
   File "..\..\..\..\..\laku测试\Release(2016-12-14)\MouseHelper.dll"
   File "..\..\..\..\..\laku测试\Release(2016-12-14)\msvcp110.dll"
   File "..\..\..\..\..\laku测试\Release(2016-12-14)\msvcr100.dll"
@@ -303,12 +303,12 @@ Function onGUIInit
 
   ;检测是否正在运行
   RETRY:
-  FindProcDLL::FindProc "luckey.exe" ;检测的运行进程名称
+  FindProcDLL::FindProc "LuckeyApp.exe" ;检测的运行进程名称
   StrCmp $R0 1 0 +3
   MessageBox MB_RETRYCANCEL|MB_ICONINFORMATION|MB_TOPMOST '检测到 "${PRODUCT_NAME}" 正在运行,请先关闭后重试，或者点击"取消"退出!' IDRETRY RETRY
 	Quit
 
-    ;消除边框
+  /*  ;消除边框
     System::Call `user32::SetWindowLong(i$HWNDPARENT,i${GWL_STYLE},0x9480084C)i.R0`
     ;隐藏一些既有控件
     GetDlgItem $0 $HWNDPARENT 1034
@@ -342,7 +342,7 @@ Function onGUIInit
   	System::Free $R0
 
 ;    GetDlgItem $R0 $HWNDPARENT 1044
-;    System::Call "user32::MoveWindow(i R0, i 0, i 0, i 374, i 153) i r2"
+;    System::Call "user32::MoveWindow(i R0, i 0, i 0, i 374, i 153) i r2"  */
 FunctionEnd
 
 
