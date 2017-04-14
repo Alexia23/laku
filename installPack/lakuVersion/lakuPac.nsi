@@ -54,7 +54,7 @@ ReserveFile `${NSISDIR}\Plugins\FindProcDLL.dll`
 
 !define MUI_CUSTOMFUNCTION_GUIINIT onGUIInit
 
-;Page custom Page.1 Page.1leave
+Page custom InstallPage
 
 ; Welcome page
 !insertmacro MUI_PAGE_WELCOME
@@ -343,6 +343,12 @@ Function onGUIInit
 
 ;    GetDlgItem $R0 $HWNDPARENT 1044
 ;    System::Call "user32::MoveWindow(i R0, i 0, i 0, i 374, i 153) i r2"  */
+FunctionEnd
+
+
+Function .onInit
+  InitPluginsDir ;初始化插件
+  File `/ONAME=$PLUGINSDIR\bg.bmp` `images\1.jpg` ;第一大背景
 FunctionEnd
 
 
