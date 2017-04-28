@@ -54,8 +54,6 @@ ReserveFile `${NSISDIR}\Plugins\FindProcDLL.dll`
 
 !define MUI_CUSTOMFUNCTION_GUIINIT onGUIInit
 
-Page custom InstallPage
-
 ; Welcome page
 !insertmacro MUI_PAGE_WELCOME
 ; License page
@@ -298,7 +296,7 @@ Function onGUIInit
   System::Call 'kernel32::CreateMutexA(i 0, i 0, t "${MyMutex_Install}") i .r1 ?e'
   Pop $R1																																		 ;;;;$$$$$安装程序已经运行
   StrCmp $R1 0 +3
-  MessageBox MB_OK|MB_ICONINFORMATION|MB_TOPMOST "程序已经在运行。"
+  MessageBox MB_OK|MB_ICONINFORMATION|MB_TOPMOST "已经有安装程序正在运行。"
   Abort
 
   ;检测是否正在运行

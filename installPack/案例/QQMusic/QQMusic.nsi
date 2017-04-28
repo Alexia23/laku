@@ -12,7 +12,7 @@ Var ImageHandle
 Var BGImage1  ;±³¾°´óÍ¼
 Var ImageHandle1
 
-;Var BGImage2  ;±³¾°´óÍ¼
+;Var B GImage2  ;±³¾°´óÍ¼
 ;Var ImageHandle2
 ;Var STATE
 
